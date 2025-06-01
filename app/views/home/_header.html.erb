@@ -26,10 +26,12 @@
           <%= link_to 'Sign in', new_user_session_path, class:"nav-link" %>
         </li>
        
-        <li class="nav-item">
-          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link" %>
-        </li>
-       
+        <li class="nav-item">  
+          <%= form_with(url: destroy_user_session_path, method: :delete, class: "d-inline") do %>
+            <%= submit_tag "Sign out", class: "nav-link btn btn-link" %>
+          <% end %>
+        
+        </li>     
         <li class="nav-item">
           <%= link_to 'Edit profile', edit_user_registration_path, class:"nav-link" %>
         </li>

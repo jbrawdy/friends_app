@@ -37,6 +37,15 @@
   </div>
 
   <div>
+    <%# form.label :user_id, style: "display: block", value: current_user.id e %>
+    <%# form.text_field "User ID" %>
+
+
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
